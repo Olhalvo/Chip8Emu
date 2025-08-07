@@ -1,11 +1,11 @@
 package me.olhalvo.emudev;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import me.olhalvo.emudev.chip8.Chip8;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Chip8 machine  = new Chip8();
+        machine.load(new byte[]{(byte)0xFF, 0x09, (byte)0xF4, (byte)0xF2, (byte) 0xFF, (byte) 0xFF});
+        machine.run();
     }
 }
