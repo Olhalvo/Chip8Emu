@@ -1,11 +1,11 @@
 package me.olhalvo.emudev;
 
-import me.olhalvo.emudev.chip8.Chip8;
+import me.olhalvo.emudev.chip8.Emulator;
 
 public class Main {
     public static void main(String[] args) {
-        Chip8 machine  = new Chip8();
-        machine.load(new byte[]{(byte)0xFF, 0x09, (byte)0xF4, (byte)0xF2, (byte) 0xFF, (byte) 0xFF});
-        machine.run();
+        Emulator emulator = new Emulator();
+        emulator.run("2-ibm-logo.ch8");
+
     }
 }
